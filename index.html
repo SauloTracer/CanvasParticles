@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        https://www.youtube.com/watch?v=0Kx4Y9TVMGg&ab_channel=Brainxyz
+
+        TODO:
+
+        Dinamically input colors and rules
+        Save configurations toa json and local storage
+        Select configurations from local storage
+        Import configuration from json
+        Share url with a specific configuration
+        Ad up
+
+
+        Cool sample configurations:
+            Flying thing: 200R,200G,200Y
+            G,G,-0.32
+            G,R,-0.17
+            G,Y,0.34
+            R,R,-0.1
+            R,G,-0.34
+            Y,Y,0.15
+            Y,G,-0.2
+
+    -->
+    <form>
+        <div>
+            <p>Population</p>
+            <input type="number" class="colorPopulation" name="red" placeholder="Red Cells" step="100"><br/>
+            <input type="number" class="colorPopulation" name="green" placeholder="Green Cells" step="100"><br/>
+            <input type="number" class="colorPopulation" name="yellow" placeholder="Yellow Cells" step="100"><br/>
+            <input type="number" class="colorPopulation" name="white" placeholder="White Cells" step="100"><br/>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div>
+            <p>Rules</p>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+            <span class="rule">
+                <select name="ruleA" class="rule-a">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <select name="ruleB" class="rule-b">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+                <input type="number" name="gravity" step=".1" class="rule-g">
+            </span>
+            <br/>
+
+            
+        </div>
+        <input type="button" value="Apply" onclick="simulate()">
+    </form>
+    <hr/>
+    <canvas id="life" width="500" height="500"></canvas>
+    <a href="./mandelbrot.html">Mandelbrot</a>
+    <script>
+        let ctx=document.getElementById("life").getContext("2d")
+        let particles = []
+        let groups = []
+        let rules = []
+        let size = 5
+        let area = 80
+        let width = 500
+        let height = 500
+
+        reset= ()=> {
+            particles = []
+            groups = []
+            rules = []
+        }
+
+        // X,Y => Position C => color, S => size
+        draw=(x,y,c,s)=>{
+            ctx.fillStyle=c
+            ctx.fillRect(x,y,s,s)
+        }
+
+        particle=(x,y,c)=>{
+            return {
+                "x":x,
+                "y":y,
+                "vx":0,
+                "vy":0,
+                "color":c
+            }
+        }
+
+        random=()=>{
+            return Math.random()*400+50;
+        }
+
+        create=(number, color, name)=> {
+            group=[]
+            for(let i=0;i<number;i++){
+                group.push(particle(random(),random(),color))
+                particles.push(group[i])
+            }
+            groups.push({group, name})
+            return group
+        }
+
+        // Assuming all particles have mass 1 and ignore sqrt
+        /*
+        Force = Gravity * mass1 * mass2 / distance^2
+        G = 1/d
+        */
+        rule=(particles1, particles2, g) => {
+            for (let i = 0; i < particles1.length; i++) {
+                // Define the forces to 0
+                fx = 0
+                fy = 0
+                for (let j = 0; j < particles2.length; j++) {
+                    a = particles1[i]
+                    b = particles2[j]
+                    
+                    //calculate the distance between the particles
+                    dx=a.x-b.x
+                    dy=a.y-b.y
+                    d = Math.sqrt(dx*dx+dy*dy)
+
+                    //calculate the force
+                    if (d > 0 && d < area) {
+                        f = g * 1/d
+                        fx += (f * dx)
+                        fy += (f * dy)
+                    }
+                }
+
+                // Apply the force to the particles
+                // Forces cause acceleration
+                a.vx = (a.vx + fx) * 0.3
+                a.vy = (a.vy + fy) * 0.3
+
+                a.x += a.vx
+                a.y += a.vy
+
+                // If the particles leave the area in an axis, invert the force direction for that axis
+                if (a.x <= size && a.vx < 0) a.vx *= -1 
+                if (a.x >= width-size && a.vx > 0) a.vx *= -1
+                if (a.y <= size && a.vy < 0) a.vy *= -1
+                if (a.y >= height-size && a.vy > 0) a.vy *= -1
+                
+            }
+        }
+
+        simulate=()=>{
+            reset()
+
+            list = document.querySelectorAll(".colorPopulation")
+            items = [...list]
+                .map(x => {
+                        if (x.value) {
+                            create(x.value, x.name, x.name)
+                        }
+                    })
+
+            ruleGroups = document.querySelectorAll(".rule")
+            ruleItems = [...ruleGroups]
+                .map(x => {
+                    let groupA = x.querySelector(".rule-a").value
+                    let groupB = x.querySelector(".rule-b").value
+                    let gravity = x.querySelector(".rule-g").value
+
+                    if(gravity)
+
+                    groupA = groups.find(g => g.name == groupA).group
+                    groupB = groups.find(g => g.name == groupB).group
+
+                    rules.push({groupA, groupB, gravity})
+                })
+        }
+
+        update=()=>{
+            rules.map(x => rule(x.groupA, x.groupB, x.gravity))
+
+            ctx.clearRect(0,0,width,height)
+            draw(0,0,"black",width)
+            for(let i=0;i<particles.length;i++){
+                draw(particles[i].x,particles[i].y,particles[i].color,size)
+            }
+            requestAnimationFrame(update);
+        }
+
+        update();
+    </script>
+</body>
+</html>
